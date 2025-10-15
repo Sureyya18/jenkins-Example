@@ -1,11 +1,13 @@
-pipeline {
+```pipeline {
 
   agent any
 
   stages {
 
     stage("commit"){
-      echo "code commited"
+      stages{
+        echo "code commited"
+      }
     }
 
     stage("build"){
@@ -15,25 +17,36 @@ pipeline {
     }
 
     stage("dev-unit"){
-      echo "unit test began"
+      stages{
+        echo "unit test began"
+      }
     }
 
     stage("dev-integration"){
-      echo "integration test began"
+      stages{
+        echo "integration test began"
+      }
     }
 
     stage("qa-smoke"){
-      echo "smoke test started"
+      stages{
+        echo "smoke test started"
+      }
     }
 
     stage("qa-regression"){
-      echo "regression test started"
+      stages{
+        echo "regression test started"
+      }
     }
 
     stage("report"){
-      echo "test report is generated"
+      stages{
+        echo "test report is generated"
+      }
     }
 
   }
+
 
 }```
