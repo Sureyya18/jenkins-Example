@@ -7,14 +7,14 @@ pipeline {
     stage("commit"){
       steps{
         echo "code commited"
-        bat "java hello.java"
-        bat "java hello"
       }
     }
 
     stage("build"){
       steps{
         echo "code built"
+        bat "javac hello.java"
+        bat "java hello"
       }
     }
 
@@ -52,4 +52,5 @@ pipeline {
 
 
 }
+
 
